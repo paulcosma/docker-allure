@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Push image') {
       steps {
-        withDockerRegistry([ credentialsId: "e80fc77a-7fce-4fbd-98ee-c7aa4d5a6952", url: "" ]) {
+        withDockerRegistry([ credentialsId: "052cba25-f00d-4ff2-b593-4e143b90515a", url: "" ]) {
           sh "docker image push paulcosma/docker-allure:${IMAGE_TAG}"
           sh "docker image push paulcosma/docker-allure:latest"
         }
